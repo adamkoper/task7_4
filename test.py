@@ -11,3 +11,7 @@ def say_hello():
 
 print(say_hello())
 
+
+from faker import Faker
+fake = Faker()
+print(fake.year())
