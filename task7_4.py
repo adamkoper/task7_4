@@ -3,7 +3,7 @@ fake = Faker()
 
 
 class Films:
-    def __init__(self, title, year, type, nr_view):
+    def __init__(self, title, year, type):
         self.title = title
         self.year = year
         self.type = type
@@ -33,6 +33,11 @@ class Series(Films):
     def __repr__(self):
         return f"Series(title={self.title} year={self.year}, type={self.type}, nr_view={self.nr_view}, nr_episode={self.nr_episode}," \
                f"nr_season={self.nr_season})"
+
+
+Titanic = Films(title="Titanic", year="1997", type="Katastroficzny")
+
+print(Titanic)
 
 
 
