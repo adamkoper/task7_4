@@ -7,7 +7,9 @@ class Films:
         self.title = title
         self.year = year
         self.type = type
-        self.nr_view = nr_view
+
+        # Variables
+        self.nr_view = 0
 
     def play(self, step=1):
         self.nr_view += step
@@ -31,6 +33,9 @@ class Series(Films):
     def __repr__(self):
         return f"Series(title={self.title} year={self.year}, type={self.type}, nr_view={self.nr_view}, nr_episode={self.nr_episode}," \
                f"nr_season={self.nr_season})"
+
+
+
 
 
 
