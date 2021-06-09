@@ -25,7 +25,7 @@ class Series(Films):
         self.nr_season = nr_season
 
     def __str__(self):
-        return f'{self.title} S{self.nr_season}E{self.nr_episode}'
+        return f'{self.title} S{self.nr_season:02}E{self.nr_episode:02}'
 
     def __repr__(self):
         return f"Series(title={self.title} year={self.year}, type={self.type}, nr_view={self.nr_view}, nr_episode={self.nr_episode}," \
