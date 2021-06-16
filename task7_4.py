@@ -34,10 +34,43 @@ class Series(Films):
         return f"Series(title={self.title} year={self.year}, type={self.type}, nr_view={self.nr_view}, nr_episode={self.nr_episode}," \
                f"nr_season={self.nr_season})"
 
+films_list =[]
 
-Titanic = Films(title="Titanic", year="1997", type="Katastroficzny")
 
-print(Titanic)
+for x in range(10):
+    film = Films(title=fake.word(), year=fake.year(), type=fake.word())
+    films_list.append(film)
+    serie = Series(title=fake.word(), year=fake.year(), type=fake.word(),
+                   nr_season=fake.random_digit(), nr_episode=fake.random_int(0,20))
+    films_list.append(serie)
+
+
+
+
+def get_movies():
+    for x in range(0, 19):
+        if isinstance(films_list[19-x], Series) == True:
+            del films_list[19-x]
+
+def get_series():
+    for x in range(0, 19):
+        if isinstance(films_list[19-x], Series) == False:
+            del films_list[19-x]
+
+
+
+print(films_list)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
