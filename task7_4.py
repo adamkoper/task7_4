@@ -62,8 +62,21 @@ def search(x):
         if films_list[y].title == x:
             print(x)
 
-print(films_list)
+import random
 
+def generate_views():
+    random.shuffle(films_list)
+    films_list[0].play()
+
+
+def multiple():
+    for a in range(10):
+        generate_views()
+
+
+print(films_list)
+generate_views()
+print(films_list)
 
 
 
