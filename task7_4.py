@@ -51,11 +51,13 @@ def get_movies():
     for x in range(0, 19):
         if isinstance(films_list[19-x], Series) == True:
             del films_list[19-x]
+            sorted(films_list)
 
 def get_series():
     for x in range(0, 19):
         if isinstance(films_list[19-x], Series) == False:
             del films_list[19-x]
+            sorted(films_list)
 
 def search(x):
     for y in range(len(films_list)):
@@ -72,6 +74,7 @@ def generate_views():
 def multiple():
     for a in range(10):
         generate_views()
+
 
 
 print(films_list)
