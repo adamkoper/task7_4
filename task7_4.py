@@ -57,7 +57,10 @@ def get_series():
         if isinstance(films_list[19-x], Series) == False:
             del films_list[19-x]
 
-
+def search(x):
+    for y in range(len(films_list)):
+        if films_list[y].title == x:
+            print(x)
 
 print(films_list)
 
