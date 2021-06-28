@@ -34,6 +34,7 @@ class Series(Films):
         return f"Series(title={self.title} year={self.year}, type={self.type}, nr_view={self.nr_view}, nr_episode={self.nr_episode}," \
                f"nr_season={self.nr_season})"
 
+
 films_list =[]
 
 
@@ -45,13 +46,12 @@ for x in range(10):
     films_list.append(serie)
 
 
-
-
 def get_movies():
     for x in range(0, 19):
         if isinstance(films_list[19-x], Series) == True:
             del films_list[19-x]
             sorted(films_list)
+
 
 def get_series():
     for x in range(0, 19):
@@ -59,12 +59,15 @@ def get_series():
             del films_list[19-x]
             sorted(films_list)
 
+
 def search(x):
     for y in range(len(films_list)):
         if films_list[y].title == x:
             print(x)
 
+
 import random
+
 
 def generate_views():
     random.shuffle(films_list)
@@ -76,10 +79,16 @@ def multiple():
         generate_views()
 
 
+multiple()
 
-print(films_list)
-generate_views()
-print(films_list)
+
+def top_titles(nr):
+    sorted(films_list, key=lambda film: film.nr_view)
+    for b in range(int(nr)):
+        print(films_list[b].title)
+
+
+
 
 
 
